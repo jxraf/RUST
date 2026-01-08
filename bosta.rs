@@ -30,6 +30,7 @@ fn main () {
         "aziz".to_string(),
         Finger{left:5, right:5}
     );
+    println!("enter one of BOSTA family name.");
     loop {
 
         let user = name();
@@ -38,11 +39,13 @@ fn main () {
     };
     println!("\n\n\n\n\n\n\n\n\n");
     
-
+ 
     if let Some(finger) = derb.get(&user){
         println!("{} 3ando {} sb3in flimna  o {} lisra "
-        ,user, Finger.left, Finger.right);
-        
+        ,user, finger.left, finger.right);
+        if continue == yes {
+    break;
+        } else {
 
     } else {
         println!("not included yet");
@@ -53,9 +56,10 @@ fn main () {
         let left = number();
 
         derb.insert(user, Finger{left, right});
+        println!("ADDED SUCCESSFULL");
+        println!("\n\n\n\n\n");
         
-        
-    }
+    } } 
 }
     
     
