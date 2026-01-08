@@ -16,11 +16,8 @@ struct Finger {
     right:i8,
 }
 fn main () {
-    let user = name();
-   println!("\n\n\n\n\n\n\n\n\n");
-
     let mut derb: HashMap<String, Finger> = HashMap::new();
-
+    
     derb.insert(
         "saaida".to_string(),
         Finger {left:6, right:6},
@@ -33,11 +30,19 @@ fn main () {
         "aziz".to_string(),
         Finger{left:5, right:5}
     );
+    loop {
+
+        let user = name();
+        if user == "exit" {
+            break;  
+    };
+    println!("\n\n\n\n\n\n\n\n\n");
+    
 
     if let Some(finger) = derb.get(&user){
-        println!("{} 3ando {} sb3in flimna  o lisra {}"
+        println!("{} 3ando {} sb3in flimna  o {} lisra "
         ,user, Finger.left, Finger.right);
-       
+        
 
     } else {
         println!("not included yet");
@@ -47,10 +52,12 @@ fn main () {
         println!("HOW MANY FINGER IN THE LEFT HAND");
         let left = number();
 
-        derb.clone(user, Finger{left, right});
+        derb.insert(user, Finger{left, right});
+        
         
     }
-
-
+}
+    
+    
 
 }
