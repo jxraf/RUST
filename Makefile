@@ -1,7 +1,12 @@
-GIT = git 
-ADD = $(GIT) add .
-COMMIT = $(GIT) commit -m "update"
-PUSH = $(GIT) push 
+GIT = git
 
-all:
-	$(ADD) && $(COMMIT) && $(PUSH)
+add:
+	$(GIT) add .
+
+commit:
+	$(GIT) commit -m "$(m)"
+
+push:
+	$(GIT) push
+
+all: add commit push

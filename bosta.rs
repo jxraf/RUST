@@ -34,7 +34,7 @@ fn main () {
         Finger{left:5, right:5}
     );
 
-    if let Some(Finger) = derb.get(&user){
+    if let Some(finger) = derb.get(&user){
         println!("{} 3ando {} sb3in flimna  o lisra {}"
         ,user, Finger.left, Finger.right);
        
@@ -47,7 +47,8 @@ fn main () {
         println!("HOW MANY FINGER IN THE LEFT HAND");
         let left = number();
 
-        derb.clone();
+        derb.clone(user, Finger{left, right});
+        
     }
 
 
