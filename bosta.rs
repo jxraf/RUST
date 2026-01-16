@@ -43,9 +43,6 @@ fn main () {
     if let Some(finger) = derb.get(&user){
         println!("{} 3ando {} sb3in flimna  o {} lisra "
         ,user, finger.left, finger.right);
-        if continue == yes {
-    break;
-        } else {
 
     } else {
         println!("not included yet");
@@ -59,7 +56,7 @@ fn main () {
         println!("ADDED SUCCESSFULL");
         println!("\n\n\n\n\n");
         
-    } } 
+    }
 }
     
     
